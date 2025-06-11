@@ -1,5 +1,6 @@
 package com.welab.k8s_backend_user.api.open;
 
+import com.welab.k8s_backend_user.common.dto.ApiResponseDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
@@ -14,4 +15,10 @@ public class UserController {
     public String test() {
         return "Hello Kubernetes";
     }
+
+    @GetMapping(value = "/hello")
+    public ApiResponseDto<String> hello() {
+        return ApiResponseDto.createOk("웰컴 투 백엔드 유저");
+    }
+
 }

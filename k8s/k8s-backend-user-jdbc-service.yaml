@@ -14,6 +14,6 @@ metadata:
   name: k8s-backend-user-jdbc-service
 subsets:
   - addresses:
-      - ip: 10.1.1.102
+      - ip: 10.1.1.102  # 도커 컨테이너 IP
     ports:
       - port: 13306
