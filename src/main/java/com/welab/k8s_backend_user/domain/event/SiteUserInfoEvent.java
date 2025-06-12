@@ -20,13 +20,13 @@ public class SiteUserInfoEvent {
     private LocalDateTime eventTime;
 
     public static SiteUserInfoEvent fromEntity(String action, SiteUser siteUser) {
-        SiteUserInfoEvent message = new SiteUserInfoEvent();
+        SiteUserInfoEvent event = new SiteUserInfoEvent();
 
-        message.action = action;
-        message.userId = siteUser.getUserId();
-        message.phoneNumber = siteUser.getPhoneNumber();
-        message.eventTime = LocalDateTime.now();
+        event.action = action;
+        event.userId = siteUser.getUserId();
+        event.phoneNumber = siteUser.getPhoneNumber();
+        event.eventTime = LocalDateTime.now();
 
-        return message;
+        return event;
     }
 }

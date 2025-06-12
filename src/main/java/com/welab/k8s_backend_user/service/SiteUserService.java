@@ -24,7 +24,6 @@ public class SiteUserService {
         siteUserRepository.save(siteUser);
 
         SiteUserInfoEvent event = SiteUserInfoEvent.fromEntity("Create", siteUser);
-//        kafkaMessageProducer.send(SiteUserInfoEvent.Topic, event);
+        kafkaMessageProducer.send(SiteUserInfoEvent.Topic, event);
     }
-
 }

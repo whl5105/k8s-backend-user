@@ -9,6 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class K8sBackendUserApplication {
 
 	public static void main(String[] args) {
+		System.out.printf("jenkins build trigger");
 		SpringApplication.run(K8sBackendUserApplication.class, args);
 	}
 

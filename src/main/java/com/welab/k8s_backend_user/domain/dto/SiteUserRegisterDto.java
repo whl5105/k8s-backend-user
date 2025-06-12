@@ -20,10 +20,11 @@ public class SiteUserRegisterDto {
 
     public SiteUser toEntity() {
         SiteUser siteUser = new SiteUser();
+
         siteUser.setUserId(this.userId);
         siteUser.setPassword(SecureHashUtils.hash(this.password));
         siteUser.setPhoneNumber(this.phoneNumber);
+
         return siteUser;
     }
-
 }

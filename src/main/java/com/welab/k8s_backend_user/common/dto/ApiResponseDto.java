@@ -25,10 +25,12 @@ public class ApiResponseDto<T> {
 
     // 데이터가 있는경우
     public static <T> ApiResponseDto<T> createOk(T data) {
+
         return new ApiResponseDto<>("OK", "요청이 성공하였습니다.", data);
     }
     //데이터가 없는경우
     public static ApiResponseDto<String> defaultOk() {
+
         return ApiResponseDto.createOk(null);
     }
     //에러 처리
