@@ -81,7 +81,7 @@ pipeline {
 
         stage('Build & Test Application') {
             steps {
-                sh "gradle clean build"
+                   sh 'export GRADLE_OPTS="-Xmx2g -Dfile.encoding=UTF-8" && gradle clean build'
             }
         }
 
